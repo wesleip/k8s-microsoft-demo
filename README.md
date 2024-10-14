@@ -11,7 +11,7 @@ Este projeto tem como objetivo explorar e demonstrar o uso de Kubernetes para ge
 
 O objetivo é obter um entendimento completo sobre como o Kubernetes pode ser usado para suportar aplicações complexas em ambientes de produção, focando na automação, escalabilidade, segurança e alta disponibilidade.
 
-Código oficial retirado do repositório [Azure-Samples] (https://github.com/Azure-Samples).
+Acesse [aqui](https://github.com/Azure-Samples) o repositório oficial Azure-Samples.
 
 ## Arquitetura do Projeto
 
