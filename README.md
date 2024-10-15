@@ -30,7 +30,7 @@ A aplicação de exemplo deste repositório é um aplicativo store-front básico
 
 * **Kind** - Download [aqui](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 * **Helm** - Download [aqui](https://helm.sh/docs/intro/install/)
-* **Helmfile** - Download[aqui](https://github.com/helmfile/helmfile)
+* **Helmfile** - Download [aqui](https://github.com/helmfile/helmfile)
 * **Make** 
 > **Nota**: O objetivo do utilitário make é determinar automaticamente quais partes de um programa grande precisam ser recompiladas e emitir os comandos necessários para recompilá-las. O make não se limita a programas. Você pode usá-lo para descrever qualquer tarefa em que alguns arquivos devam ser atualizados automaticamente de outros sempre que outros forem alterados.
 
@@ -83,6 +83,11 @@ Após executar o comando `make build`, aplicar o deployment kustomize no cluster
 
 ```
 make deploy
+```
+Ao final dos testes o cluster pode ser destruído executando o comando:
+
+```
+make destroy
 ```
 
 ## Tecnologias utilizadas no projeto
