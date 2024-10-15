@@ -47,7 +47,21 @@ Para alterar o endereço IP default deste projeto, você pode executar o seguint
 docker inspect kind | jq -r '.[].IPAM.Config[0].Subnet'
 ```
 
-Após obter a saida do comando acima com endereço IP, alterar o arquivo metallb-pool.yaml com a quantidade de IPs desejados. 
+Após obter a saida do comando acima com endereço IP, alterar o arquivo metallb-pool.yaml com a quantidade de IPs desejados.
+
+### Executando o deploy da aplicação via kustomize
+
+Para deployar a aplicação no cluster, primeiro devemos atualizar o arquivo kustomization.yaml para garantir que todas as alterações sejam aplicadas no momento do deployment:
+
+```
+make build
+```
+
+Após executar o comando `make build`, aplicar o deployment kustomize no cluster:
+
+```
+make deploy
+```
 
 ## Tecnologias utilizadas no projeto
 
