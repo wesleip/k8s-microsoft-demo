@@ -11,10 +11,10 @@ create:
 up: create pre
 
 build:
-	@kubectl kustomize /base
+	@kubectl kustomize ./base/
 
 deploy:
-	@kubectl apply -k /base/kustomization.yaml
+	@kubectl apply -k ./base/
 
 destroy:
 	@kind delete clusters kind
