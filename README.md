@@ -30,13 +30,24 @@ A aplicação de exemplo deste repositório é um aplicativo store-front básico
 
 Para este estudo, utilizaremos algumas tecnologias que simulam um ambiente de produção executado de forma local.
 
-Para subir o cluster com os nodes, instalar o metallb e o ingress controller executar o comando:
+Para subir o cluster com os nodes, instalar o metallb e o ingress controller, executar o comando:
 
 ```
 make up
 ```
 
 > **Nota**: Após a execução do comando acima, o ambiente será configurado conforme instruções contidas no arquivo _Makefile_. Isso levará alguns minutos para que o ambiente fique completamente disponível.
+
+> [!IMPORTANT]
+> O range de endereços IPs alocados para o metallb contidos no arquivo metallb-pool.yaml foi setado de acordo com o endereço IP da docker network do ambiente local. Importante checar essa configuração de acordo com o seu ambiente.
+
+Para alterar o endereço IP default deste projeto, você pode executar o seguinte comando:
+
+```
+docker inspect kind | jq -r '.[].IPAM.Config[0].Subnet'
+```
+
+Após obter a saida do comando acima com endereço IP, alterar o arquivo metallb-pool.yaml com a quantidade de IPs desejados. 
 
 ## Tecnologias utilizadas no projeto
 
