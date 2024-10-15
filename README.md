@@ -26,8 +26,24 @@ A aplicação de exemplo deste repositório é um aplicativo store-front básico
 * Serviço de pedido: Realiza pedidos
 * Rabbit MQ: Fila de mensageria dos pedidos.
 
+## Automação do projeto
+
+Para este estudo, utilizaremos algumas tecnologias que simulam um ambiente de produção executado de forma local.
+
+Para subir o cluster com os nodes, instalar o metallb e o ingress controller executar o comando:
+
+```
+make up
+```
+
+> **Nota**: Após a execução do comando acima, o ambiente será configurado conforme instruções contidas no arquivo _Makefile_. Isso levará alguns minutos para que o ambiente fique completamente disponível.
+
 ## Tecnologias utilizadas no projeto
 
+* Kind
+* Makefile
+* Metallb
+* Nginx Ingress
 * .NET Core
 * RabbitMq
 * Docker
