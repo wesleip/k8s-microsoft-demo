@@ -5,6 +5,9 @@ metadata:
   name: store-front
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - store.172.18.0.100.nip.io
   rules:
   - host: "store.172.18.0.100.nip.io"
     http:
