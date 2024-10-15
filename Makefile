@@ -5,10 +5,13 @@ pre:
 	@kubectl wait --namespace metallb-system --for=condition=ready pod --selector=app=metallb --timeout=300s
 	@kubectl apply -f infra-manifests/
 
+helm:
+	@helmfile apply
+
 create:
 	@kind create cluster --name demo --config ./kind-cluster/kind.yaml
 
-up: create pre
+up: create pre helm
 
 build:
 	@kubectl kustomize ./base/
