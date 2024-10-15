@@ -36,11 +36,11 @@ spec:
             memory: 128Mi
           limits:
             cpu: 250m
-            memory: s56Mi
+            memory: 256Mi
         volumeMounts:
         - name: rabbitmq-enabled-plugins
           mountPath: /etc/rabbitmq/enabled_plugins
-          subPath: /etc/rabbitmq/enabled_plugins
+          subPath: enabled_plugins
       volumes:
       - name: rabbitmq-enabled-plugins
         configMap:
