@@ -3,10 +3,12 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - ms-demo-ingress.yaml
+  - order-secret.yaml
   - order-deployment.yaml
   - order-service.yaml
   - product-deployment.yaml
   - product-service.yaml
+  - rabbitmq-secret.yaml
   - rabbitmq-configmap.yaml
   - rabbitmq-deployment.yaml
   - rabbitmq-service.yaml
