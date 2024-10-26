@@ -25,11 +25,9 @@ spec:
           name: rabbitmq-amqp
         - containerPort: 15672
           name: rabbitmq-http
-        env:
-        - name: RABBITMQ_DEFAULT_USER
-          value: "username"
-        - name: RABBITMQ_DEFAULT_PASS
-          value: "password"
+        envFrom:
+          - secretRef:
+              name: rabbitmq-secret
         resources:
           requests:
             cpu: 10m
