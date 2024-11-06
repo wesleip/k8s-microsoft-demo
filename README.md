@@ -100,3 +100,4 @@ make destroy
 * RabbitMq
 * Docker
 * Kubernetes
+* Sealed Secrets
