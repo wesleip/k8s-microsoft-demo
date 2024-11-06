@@ -1,8 +1,11 @@
 repositories:
   - name: ingress-nginx
     url: https://kubernetes.github.io/ingress-nginx
+  - name: sealed-secrets
+    url: https://bitnami-labs.github.io/sealed-secrets
 
 releases:
+
 - name: ingress-nginx
   namespace: ingress-nginx
   createNamespace: true
@@ -10,3 +13,10 @@ releases:
   version: 4.9.1
   values:
     - values/ingress-nginx/values.yaml
+
+- name: sealed-secrets
+  namespace: kube-system
+  chart: sealed-secrets/sealed-secrets
+  version: 2.16.2
+  values:
+    - values/sealed-secrets/values.yaml
