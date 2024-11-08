@@ -28,8 +28,9 @@ releases:
 - name: prometheus-community
   namespace: monitoring
   createNamespace: true
-  version: 25.29.0
   chart: prometheus-community/prometheus
+  version: 25.29.0
+  values:
     - values/prometheus/values.yaml
 
 - name: grafana
