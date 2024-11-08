@@ -28,6 +28,7 @@ releases:
 - name: prometheus-community
   namespace: monitoring
   createNamespace: true
+  version: 25.29.0
   chart: prometheus-community/prometheus
     - values/prometheus/values.yaml
 
