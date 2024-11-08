@@ -33,6 +33,7 @@ A aplicação de exemplo deste repositório é um aplicativo store-front básico
 * **Helmfile** - Download [aqui](https://github.com/helmfile/helmfile)
 * **Make** 
 > **Nota**: O objetivo do utilitário make é determinar automaticamente quais partes de um programa grande precisam ser recompiladas e emitir os comandos necessários para recompilá-las. O make não se limita a programas. Você pode usá-lo para descrever qualquer tarefa em que alguns arquivos devam ser atualizados automaticamente de outros sempre que outros forem alterados.
+* **Utilitário Kubeseal** - Download [aqui](https://github.com/bitnami-labs/sealed-secrets?tab=readme-ov-file#installation)
 
 Instalação do utilitário make
 
@@ -101,3 +102,5 @@ make destroy
 * Docker
 * Kubernetes
 * Sealed Secrets
+* Prometheus
+* Grafana
