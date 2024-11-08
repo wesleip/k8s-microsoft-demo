@@ -3,6 +3,10 @@ repositories:
     url: https://kubernetes.github.io/ingress-nginx
   - name: sealed-secrets
     url: https://bitnami-labs.github.io/sealed-secrets
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
 
 releases:
 
@@ -20,3 +24,16 @@ releases:
   version: 2.16.2
   values:
     - values/sealed-secrets/values.yaml
+
+- name: prometheus-community
+  namespace: monitoring
+  createNamespace: true
+  chart: prometheus-community/prometheus
+    - values/prometheus/values.yaml
+
+- name: grafana
+  namespace: monitoring
+  chart: grafana/grafana
+  version: 8.5.12
+  values:
+    - values/grafana/values.yaml

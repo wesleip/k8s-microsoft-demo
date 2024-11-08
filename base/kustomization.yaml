@@ -14,3 +14,4 @@ resources:
   - rabbitmq-service.yaml
   - store-deployment.yaml
   - store-service.yaml
+  - grafana-ingress.yaml
