@@ -18,6 +18,9 @@ build:
 	@kubectl kustomize ./base/
 
 deploy:
+	@helm upgrade --install sealed-secrets -n kube-system --set-string fullnameOverride=sealed-secrets-controller sealed-secrets/sealed-secrets
+	@kubeseal < k8s-manifests/order-service/order-secret.yaml -oyaml | kubectl neat > base/sealed-secret-order.yaml
+	@kubeseal < k8s-manifests/rabbitmq/rabbit-secret.yaml -oyaml | kubectl neat > base/sealed-secret-rabbitmq.yaml
 	@kubectl apply -k ./base/
 
 delete:
