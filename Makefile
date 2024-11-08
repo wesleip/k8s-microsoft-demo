@@ -20,5 +20,8 @@ build:
 deploy:
 	@kubectl apply -k ./base/
 
+delete:
+	@kubectl delete -k ./base/
+
 destroy:
 	@kind delete clusters demo
