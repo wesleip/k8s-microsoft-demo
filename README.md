@@ -9,6 +9,8 @@ Este projeto tem como objetivo explorar e demonstrar o uso de Kubernetes para ge
 
 * Aplicações resilientes e escaláveis: Desenvolvimento de aplicações que possam escalar de forma eficiente e lidar com falhas em um ambiente de produção em Kubernetes.
 
+* Monitoração em tempo real: O Prometheus coleta e armazena as métricas, enquanto o Grafana oferece uma interface intuitiva para visualização e análise dos dados, permitindo identificar rapidamente qualquer anomalia e melhorar a observabilidade do ambiente.
+
 O objetivo é obter um entendimento completo sobre como o Kubernetes pode ser usado para suportar aplicações complexas em ambientes de produção, focando na automação, escalabilidade, segurança e alta disponibilidade.
 
 Acesse [aqui](https://github.com/Azure-Samples) o repositório oficial Azure-Samples.
